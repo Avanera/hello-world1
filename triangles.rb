@@ -5,13 +5,13 @@ b = gets.chomp.to_i
 puts "Сторона с?"
 c = gets.chomp.to_i
 
-sides = [a, b, c]
-sides.sort!
+hyp, side1, side2 = [a, b, c].sort!
 
-if (sides[0]**2) + (sides[1]**2) == (sides[2]**2)
+
+if (hyp ** 2) + (side1 ** 2) == (side2 ** 2)
 	puts "Треугольник прямоугольный"
-elsif sides[0] == sides[1]
-	puts "Треугольник равнобедренный"
-elsif sides[0] == sides[1] && sides[1] == sides[2]
+elsif hyp == side1 && side1 == side2
 	puts "Треугольник равносторонний"
+elsif hyp == side1
+	puts "Треугольник равнобедренный"
 end
